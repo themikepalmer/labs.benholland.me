@@ -1,0 +1,274 @@
+/***************************
+	1. MIXINS
+***************************/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes dropInBounce {
+  0% {
+    transform: translateY(100%);
+  }
+  80% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@-moz-keyframes dropInBounce {
+  0% {
+    -moz-transform: translateY(100%);
+  }
+  80% {
+    -moz-transform: translateY(-5%);
+  }
+  100% {
+    -moz-transform: translateY(0%);
+  }
+}
+@-webkit-keyframes dropInBounce {
+  0% {
+    -webkit-transform: translateY(100%);
+  }
+  80% {
+    -webkit-transform: translateY(-5%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+  }
+}
+@-ms-keyframes dropInBounce {
+  0% {
+    -ms-transform: translateY(100%);
+  }
+  80% {
+    -ms-transform: translateY(-5%);
+  }
+  100% {
+    -ms-transform: translateY(0%);
+  }
+}
+@-o-keyframes dropInBounce {
+  0% {
+    -o-transform: translateY(100%);
+  }
+  80% {
+    -o-transform: translateY(-5%);
+  }
+  100% {
+    -o-transform: translateY(0%);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+@-moz-keyframes bounce {
+  0% {
+    -moz-transform: translateY(0);
+  }
+  100% {
+    -moz-transform: translateY(10px);
+  }
+}
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+  }
+}
+@-ms-keyframes bounce {
+  0% {
+    -ms-transform: translateY(0);
+  }
+  100% {
+    -ms-transform: translateY(10px);
+  }
+}
+@-o-keyframes bounce {
+  0% {
+    -o-transform: translateY(0);
+  }
+  100% {
+    -o-transform: translateY(10px);
+  }
+}
+@keyframes bounceLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+@-moz-keyframes bounceLeft {
+  0% {
+    -moz-transform: translateX(0);
+  }
+  100% {
+    -moz-transform: translateX(-20px);
+  }
+}
+@-webkit-keyframes bounceLeft {
+  0% {
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-20px);
+  }
+}
+@-ms-keyframes bounceLeft {
+  0% {
+    -ms-transform: translateX(0);
+  }
+  100% {
+    -ms-transform: translateX(-20px);
+  }
+}
+@-o-keyframes bounceLeft {
+  0% {
+    -o-transform: translateX(0);
+  }
+  100% {
+    -o-transform: translateX(-20px);
+  }
+}
+@keyframes bounceRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
+@-moz-keyframes bounceRight {
+  0% {
+    -moz-transform: translateX(0);
+  }
+  100% {
+    -moz-transform: translateX(20px);
+  }
+}
+@-webkit-keyframes bounceRight {
+  0% {
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(20px);
+  }
+}
+@-ms-keyframes bounceRight {
+  0% {
+    -ms-transform: translateX(0);
+  }
+  100% {
+    -ms-transform: translateX(20px);
+  }
+}
+@-o-keyframes bounceRight {
+  0% {
+    -o-transform: translateX(0);
+  }
+  100% {
+    -o-transform: translateX(20px);
+  }
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@-moz-keyframes slideUp {
+  0% {
+    -moz-transform: translateY(100%);
+  }
+  100% {
+    -moz-transform: translateY(0%);
+  }
+}
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+  }
+}
+@-ms-keyframes slideUp {
+  0% {
+    -ms-transform: translateY(100%);
+  }
+  100% {
+    -ms-transform: translateY(0%);
+  }
+}
+@-o-keyframes slideUp {
+  0% {
+    -o-transform: translateY(100%);
+  }
+  100% {
+    -o-transform: translateY(0%);
+  }
+}
+/* CSS STUFF GOES HERE */

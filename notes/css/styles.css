@@ -1,0 +1,97 @@
+* {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: 0.2s linear;
+	-moz-transition: 0.2s linear;
+	transition: 0.2s linear;
+}
+
+@font-face {
+    font-family: 'Cambo';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Cambo'), local('Cambo-Regular'), url(http://themes.googleusercontent.com/static/fonts/cambo/v2/Hpv6vCTojizn0Qwl_Bb2SQ.woff) format('woff');
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+	font-family: "Cambo",serif;
+	font-size:16px;
+	background: #FAFAFA;
+	overflow-x:hidden;
+}
+
+section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 8px;
+    width: 95%;
+    height: 100%;
+}
+
+section #notes-list {
+    width:100%;
+}
+
+section #notes-list li {
+	display: block;
+	padding: 9px;
+	border: 1px solid #93c799;
+	margin-bottom: 6px;
+	line-height: 20px;
+	background: #ddfce0;
+	overflow: hidden;
+	display: none;
+
+	-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+	-moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+section input[type="checkbox"] {
+	margin: 4px 10px 0 0;
+	float: left;
+}
+
+section input#notes-input {
+    position: relative;
+    top: 10px;
+    left: 0;
+    margin: 0;
+    width: 90%;
+    background: transparent;
+    font: inherit;
+    border:none;
+}
+
+section input#notes-input:focus {
+	outline:none;
+}
+
+section #notes-list li.done span {
+	color: #ccc;
+	text-decoration: line-through;
+}
+
+section #notes-list li span.close {
+	position:relative;
+	top: -1px;
+	right: 4px;
+	color: #d55c70;
+	cursor: pointer;
+	font-size: 110%;
+	float:right;
+}
+
+section #notes-list li span.close:hover {
+	color: #711d2b;
+}

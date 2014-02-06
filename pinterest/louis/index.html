@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+<link href="http://interactiveblend.com/pin_site/css/style.css" rel="stylesheet" type="text/css" />
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="http://interactiveblend.com/pin_site/js/script.js"></script>
+<!--[if IE]><script src="http://interactiveblend.com/pin_site/http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+<script type="text/javascript">
+var colCount = 0;
+var colWidth = 0;
+var margin = 20;
+var windowWidth = 0;
+var blocks = [];
+
+$(function(){
+    $(window).resize(setupBlocks);
+});
+
+function setupBlocks() {
+    windowWidth = $(window).width()-225;
+    colWidth = $('.block').outerWidth();
+    blocks = [];
+    colCount = Math.floor(windowWidth/(colWidth+margin*2));
+    for(var i=0;i<colCount;i++){
+        blocks.push(margin);
+    }
+    positionBlocks();
+}
+
+function positionBlocks() {
+    $('.block').each(function(){
+        var min = Array.min(blocks);
+        var index = $.inArray(min, blocks);
+        var leftPos = margin+(index*(colWidth+margin));
+        $(this).css({
+            'left':leftPos+'px',
+            'top':min+'px'
+        });
+        blocks[index] = min+$(this).outerHeight()+margin;
+    }); 
+    var max = Array.max(blocks);
+    $('.containter').css({'height':(max+200)+'px'});
+}
+
+// Function to get the Min value in Array
+Array.min = function(array) {
+    return Math.min.apply(Math, array);
+};
+Array.max = function(array) {
+    return Math.max.apply(Math, array);
+};
+</script>
+
+</head>
+
+<body onload="setupBlocks();">
+
+<div class="wrapper"><!-- begin wrapper -->
+
+<div class="header"><!--begin header -->
+	
+</div><!--end header -->
+
+<div class="containter"><!--begin main content -->
+    <div class="home_inner">    
+        <div class="side_nav"><!--begin side nav -->
+            <ul class="cat_navigation">
+                <li class="cat1"><a href="#">general public</a></li>
+                <li class="cat2"><a href="#">analyst & investor shareholder</a></li>
+                <li class="cat3"><a href="#">journalist</a></li>
+                <li class="cat4"><a href="#">applicant</a></li>
+            </ul>
+            
+         <div class="financials">
+            	<img src="http://interactiveblend.com/pin_site/images/financials.jpg" />
+             </div>
+            
+        </div><!--end side nav -->
+        
+<div class="home_content"><!-- begin home_content -->
+           
+	<div class="block" style="background-color:#0cb2b0">
+		<img src="http://interactiveblend.com/pin_site/images/stock.jpg">
+	</div>
+
+	<div class="block" id="cat2">
+    	<img src="http://interactiveblend.com/pin_site/images/1.jpg">
+    	<h1>the war of the nylons</h1>
+	    <p>Lorem ipsum dolor amet, consectetur adipisicing elit, do eiusmod tempor incididunt ut labore [...]</p>
+        	<ul class="social">
+            	<li><img src="http://interactiveblend.com/pin_site/images/tweet_block.jpg"></li>
+                <li><img src="http://interactiveblend.com/pin_site/images/like_block.jpg"></li>
+            </ul>
+	</div>
+
+	<div class="block" id="cat3">
+    	<img src="http://interactiveblend.com/pin_site/images/2.jpg">
+    	<h1>kate spade lorem ipsum dolor title goes here!</h1>
+	    <p>Short description goes here lorem ipsum amet, consectetur adipisicing elit, eiusmod aliqua [...]</p>
+        	<ul class="social">
+            	<li><img src="http://interactiveblend.com/pin_site/images/tweet_block.jpg"></li>
+                <li><img src="http://interactiveblend.com/pin_site/images/like_block.jpg"></li>
+            </ul>
+	</div>
+
+	<div class="block" id="cat1">
+    	<img src="http://interactiveblend.com/pin_site/images/3.jpg">
+    	<h1>our 5 favorite curated online picks of the week</h1>
+	    <p>For the winter that wasn’t, this week we’ve found great transitional items from all our go-to style curators [...]</p>
+        	<ul class="social">
+            	<li><img src="http://interactiveblend.com/pin_site/images/tweet_block.jpg"></li>
+                <li><img src="http://interactiveblend.com/pin_site/images/like_block.jpg"></li>
+            </ul>
+	</div>
+    
+	<div class="block" id="cat1">
+    	<img src="http://interactiveblend.com/pin_site/images/4.jpg">
+    	<h1>lucky brand lorem ipsum dolorsit amet title!</h1>
+	    <p>Short description goes here lorem ipsum amet, consectetur adipisicing elit, eiusmod aliqua [...]</p>
+        	<ul class="social">
+            	<li><img src="http://interactiveblend.com/pin_site/images/tweet_block.jpg"></li>
+                <li><img src="http://interactiveblend.com/pin_site/images/like_block.jpg"></li>
+            </ul>
+	</div>
+ 
+    <div class="block" style="background-color:#e34f35">
+		<img src="http://interactiveblend.com/pin_site/images/press.jpg">
+	</div>
+
+	<div class="block" id="cat2">
+    	<img src="http://interactiveblend.com/pin_site/images/5.jpg">
+    	<h1>fifth & pacific by the numbers</h1>
+	    <p>Lorem ipsum dolor amet, consectetur adipisicing elit, do eiusmod tempor incididunt ut labore [...]</p>
+        	<ul class="social">
+            	<li><img src="http://interactiveblend.com/pin_site/images/tweet_block.jpg"></li>
+                <li><img src="http://interactiveblend.com/pin_site/images/like_block.jpg"></li>
+            </ul>
+	</div>
+
+	<div class="block" id="cat1">
+    	<img src="http://interactiveblend.com/pin_site/images/6.jpg">
+    	<h1>benefits of u.s. production could bring back 'made in usa'</h1>
+	    <p>From clothing to refrigerators, domestic manufacturing is on the rebound, and the driving factor isn’t price [...]</p>
+        	<ul class="social">
+            	<li><img src="http://interactiveblend.com/pin_site/images/tweet_block.jpg"></li>
+                <li><img src="http://interactiveblend.com/pin_site/images/like_block.jpg"></li>
+            </ul>
+	</div>
+
+	<div class="block" id="cat1">
+    	<img src="http://interactiveblend.com/pin_site/images/7.jpg">
+    	<h1>juicy couture will deliver valentine’s treats to benefit loveisrespect.org</h1>
+	    <p>For the winter that wasn’t, this week we found [...]</p>
+        	<ul class="social">
+            	<li><img src="http://interactiveblend.com/pin_site/images/tweet_block.jpg"></li>
+                <li><img src="http://interactiveblend.com/pin_site/images/like_block.jpg"></li>
+            </ul>
+	</div>
+
+	<div class="block" id="cat3">
+    	<img src="http://interactiveblend.com/pin_site/images/8.jpg">
+    	<h1>jack spade lorem ipsum dolor sit amet title</h1>
+	    <p>Short description goes here lorem ipsum amet, consectetur adipisicing elit, eiusmod aliqua [...]</p>
+        	<ul class="social">
+            	<li><img src="http://interactiveblend.com/pin_site/images/tweet_block.jpg"></li>
+                <li><img src="http://interactiveblend.com/pin_site/images/like_block.jpg"></li>
+            </ul>
+	</div>
+
+	<div class="block" id="cat3">
+    	<img src="http://interactiveblend.com/pin_site/images/9.jpg">
+    	<h1>juicy couture lorem ipsum dolor</h1>
+	    <p>Short description goes here lorem ipsum amet, consectetur adipisicing elit, eiusmod aliqua [...]</p>
+        	<ul class="social">
+            	<li><img src="http://interactiveblend.com/pin_site/images/tweet_block.jpg"></li>
+                <li><img src="http://interactiveblend.com/pin_site/images/like_block.jpg"></li>
+            </ul>
+	</div>
+
+</div><!-- end home_content -->        
+        </div>
+    <div class="push"></div>
+</div><!--end container -->
+</div><!--end wrapper -->
+
+<div class="footer"><!--begin footer -->
+	<div class="inner">
+    	<div class="search"><img src="http://interactiveblend.com/pin_site/images/search_footer.jpg" /></div>
+            <div class="footer_nav">
+            	<ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">company</a></li>
+                    <li><a href="#">brands</a></li>
+                    <li><a href="#">media center</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">investor relations</a></li>
+                    <li><a href="#">corporate responsibility</a></li>
+                    <li><a href="#">careers </a></li>
+                </ul>
+            </div>
+    </div>
+</div><!--end footer -->
+
+</body>
+</html>

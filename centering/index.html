@@ -1,0 +1,45 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<title>Responsive Script To Center List Items</title>
+
+	<link rel="stylesheet" href="css/styles.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/centerItems.min.js"></script>
+
+	<!--[if lte IE 7]><script src="/ie7/warning.js"></script><script>window.onload=function(){e("/ie7/")}</script><![endif]-->
+
+	<script>
+		$(function() {
+			$('#container').centerItems();
+		});
+	</script>
+</head>
+<body>
+
+	<h1>Centering List Items</h1>
+
+	<p>Resize your browser window to see how to blocks react</p>
+		
+	<ul id="container">
+		<li>Uncertainty is the only certainty there is</li>
+		<li>Life is like a ten-speed bicycle. Most of us have gears we never use.</li>
+		<li>Fear is only as deep as the mind allows</li>
+		<li>Remember, today is the tomorrow you worried about yesterday.</li>
+		<li>Life shrinks or expands in proportion to one's courage</li>
+		<li>Some people develop a wishbone where their back bone should be.</li>
+		<li>There is a tide in the affairs of men</li>
+		<li>Be creative. Use unconventional thinking. And have the guts to carry it out.</li>
+		<li>Do what you feel in your heart to be right - for you'll be criticized anyway.</li>
+		<li>The better I get, the more I realize how much better I can get.</li>
+		<li>Be the change you wish to see in the world</li>
+		<li>I've got all the money I'll ever need, if I die by four o'clock.</li>
+		<li>Everyone is entitled to their own incorrect opinion.</li>
+	</ul>
+
+	<p>To use this script, download the <a href="centerItems.js">centerItems.js</a> file (<a href="centerItems.min.js">minified</a>) and include it in your page, along with this code:</p>
+	<pre>$('#container').centerItems();</pre>
+
+</body>
+</html>

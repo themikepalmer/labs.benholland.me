@@ -1,0 +1,266 @@
+@import "../_imports";
+
+html, body {
+   width: 100%;
+   height: 100%;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background: #D8C9B7 url('/content/images/bg.jpg') 0 0 repeat;
+
+    &.hide-scrollbar {
+        overflow: hidden;
+    }
+}
+
+#banner {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 188px;
+    background: #FFF;
+    margin-top: -100px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    text-align: center;
+    z-index: 10001;
+
+    &.middle {
+        top: 50%;
+        .transition(1s, all, cubic-bezier(0.4, -0.3, 0.6, 1.4));
+    }
+
+    &.fixed {
+        position: fixed;
+        top: 0;
+        margin-top: 0;
+    }
+
+    .scrolled & {
+        .no-transition();
+    }
+
+    @media screen and (max-width: 1024px) {
+        height: 140px;
+        margin-top: -70px;
+    }
+
+    img {
+        height: 100%;
+        max-height: 188px;
+        width: auto;
+    }
+
+    .line {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: #A6C5AF;
+        z-index: -1;
+    }
+}
+
+#logo,
+#tagline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#logo {
+    margin: -270px 0 0 -207px;
+}
+
+#tagline {
+    margin: 110px 0 0 -273px;
+}
+
+#home {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto 250px auto;
+    text-align: center;
+    .animation(fadeIn, 0.8s);
+}
+
+#down_arrow {
+    position: fixed;
+    left: 50%;
+    bottom: -50px;
+    margin-left: -71px;
+    cursor: pointer;
+    z-index: 10000;
+    opacity: 0;
+
+    .transition(0.6s, all, ease-in-out);
+
+    .top & {
+        bottom: 0;
+        opacity: 1;
+        .animation(bounce, 0.6s, ease-in-out, infinite, alternate);
+    }
+}
+
+
+
+
+#card_container {
+    position: relative;
+    height: 3000px;
+    z-index: 2;
+
+    .animation(fadeIn, 0.6s);
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.card-wrapper {
+
+    &.flipped {
+        .transition(0.4s);
+        .transform(translateX(-200px));
+    }
+
+    .card {
+        position: relative;
+        width: 390px;
+        height: 460px;
+
+        background-color: #FFF;
+        background-image: url('/content/images/loader.gif');
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        padding: 20px;
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: 0 0 8px rgba(0,0,0,0.2);
+        text-align: center;
+        cursor: pointer;
+        .translateZHack();
+
+        @media screen and (max-width: 1024px) {
+            width: 300px;
+            height: 354px;
+        }
+
+        &.loaded {
+            background-size: 90% 90%;
+        }
+    }
+}
+
+.food-photos {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 390px;
+    margin: 40px 0 0 80px;
+    text-align: center;
+    z-index: 1;
+    display: none;
+
+    @media screen and (max-width: 1024px) {
+        width: 390px;
+        margin: 10px 0 0 0;
+    }
+
+    .title {
+        margin-bottom: 15px;
+        opacity: 0;
+
+        .transition(0.4s, opacity);
+    }
+
+    .images {
+        img {
+            width: 125px;
+            height: 125px;
+            margin: 10px;
+            padding: 12px;
+            background: #FFF url('/content/images/loader.gif') center center no-repeat;
+            border-radius: 10px;
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+
+            .transform(translateY(500%));
+
+            &:nth-child(1) { .transition(0.4s, all, ease-in-out, 0.75s); }
+            &:nth-child(2) { .transition(0.4s, all, ease-in-out, 0.5s); }
+            &:nth-child(3) { .transition(0.4s, all, ease-in-out, 0.25s); }
+            &:nth-child(4) { .transition(0.4s, all, ease-in-out, 0s); }
+
+            @media screen and (max-width: 1024px) {
+                width: 110px;
+                height: 110px;
+                padding: 8px;
+            }
+        }
+
+        &.loaded img {
+            background-image: none;
+        }
+
+        &.showing {
+            display: block;
+
+            img {
+                .transform(translateY(0));
+
+                &:nth-child(1) { .transition(0.6s, all, ease-in-out, 0s); }
+                &:nth-child(2) { .transition(0.6s, all, ease-in-out, 0.25s); }
+                &:nth-child(3) { .transition(0.6s, all, ease-in-out, 0.5s); }
+                &:nth-child(4) { .transition(0.6s, all, ease-in-out, 0.75s); }
+            }
+        }
+    }
+}
+
+
+
+.helper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 165px;
+    height: 48px;
+
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    border: none;
+    text-indent: -100%;
+    overflow: hidden;
+    display: none;
+
+    &.left {
+        margin-left: -425px;
+        background-image: url('/content/images/find-out-more.png');
+        .animation(bounceRight, 0.8s, ease-in-out, infinite, alternate);
+
+        @media screen and (max-width: 1024px) {
+            margin-left: -370px;
+        }
+    }
+
+    &.right {
+        margin-left: 260px;
+        background-image: url('/content/images/flip-the-card.png');
+        .animation(bounceLeft, 0.8s, ease-in-out, infinite, alternate);
+
+        @media screen and (max-width: 1024px) {
+            margin-left: 205px;
+        }
+    }
+}
